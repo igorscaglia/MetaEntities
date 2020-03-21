@@ -1,0 +1,784 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Entity.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="EntityStoreContainer">
+          <EntitySet Name="BlobEntityAttributeTable" EntityType="Entity.Store.BlobEntityAttributeTable" store:Type="Tables" Schema="iscaglia_8" />
+          <EntitySet Name="BooleanEntityAttributeTable" EntityType="Entity.Store.BooleanEntityAttributeTable" store:Type="Tables" Schema="iscaglia_8" />
+          <EntitySet Name="DateTimeEntityAttributeTable" EntityType="Entity.Store.DateTimeEntityAttributeTable" store:Type="Tables" Schema="iscaglia_8" />
+          <EntitySet Name="DoubleEntityAttributeTable" EntityType="Entity.Store.DoubleEntityAttributeTable" store:Type="Tables" Schema="iscaglia_8" />
+          <EntitySet Name="EntityAttributeTable" EntityType="Entity.Store.EntityAttributeTable" store:Type="Tables" Schema="iscaglia_8" />
+          <EntitySet Name="EntityTable" EntityType="Entity.Store.EntityTable" store:Type="Tables" Schema="iscaglia_8" />
+          <EntitySet Name="FloatEntityAttributeTable" EntityType="Entity.Store.FloatEntityAttributeTable" store:Type="Tables" Schema="iscaglia_8" />
+          <EntitySet Name="IntegerEntityAttributeTable" EntityType="Entity.Store.IntegerEntityAttributeTable" store:Type="Tables" Schema="iscaglia_8" />
+          <EntitySet Name="MediumStringEntityAttributeTable" EntityType="Entity.Store.MediumStringEntityAttributeTable" store:Type="Tables" Schema="iscaglia_8" />
+          <EntitySet Name="StringEntityAttributeTable" EntityType="Entity.Store.StringEntityAttributeTable" store:Type="Tables" Schema="iscaglia_8" />
+          <EntitySet Name="TinyStringEntityAttributeTable" EntityType="Entity.Store.TinyStringEntityAttributeTable" store:Type="Tables" Schema="iscaglia_8" />
+          <AssociationSet Name="fk_IdEntity_BlobEntityAttribute" Association="Entity.Store.fk_IdEntity_BlobEntityAttribute">
+            <End Role="EntityAttributeTable" EntitySet="EntityAttributeTable" />
+            <End Role="BlobEntityAttributeTable" EntitySet="BlobEntityAttributeTable" />
+          </AssociationSet>
+          <AssociationSet Name="fk_IdEntity_BooleanEntityAttribute" Association="Entity.Store.fk_IdEntity_BooleanEntityAttribute">
+            <End Role="EntityAttributeTable" EntitySet="EntityAttributeTable" />
+            <End Role="BooleanEntityAttributeTable" EntitySet="BooleanEntityAttributeTable" />
+          </AssociationSet>
+          <AssociationSet Name="fk_IdEntity_DateTimeEntityAttribute" Association="Entity.Store.fk_IdEntity_DateTimeEntityAttribute">
+            <End Role="EntityAttributeTable" EntitySet="EntityAttributeTable" />
+            <End Role="DateTimeEntityAttributeTable" EntitySet="DateTimeEntityAttributeTable" />
+          </AssociationSet>
+          <AssociationSet Name="fk_IdEntity_DoubleEntityAttribute" Association="Entity.Store.fk_IdEntity_DoubleEntityAttribute">
+            <End Role="EntityAttributeTable" EntitySet="EntityAttributeTable" />
+            <End Role="DoubleEntityAttributeTable" EntitySet="DoubleEntityAttributeTable" />
+          </AssociationSet>
+          <AssociationSet Name="fk_IdEntity_EntityAttribute" Association="Entity.Store.fk_IdEntity_EntityAttribute">
+            <End Role="EntityTable" EntitySet="EntityTable" />
+            <End Role="EntityAttributeTable" EntitySet="EntityAttributeTable" />
+          </AssociationSet>
+          <AssociationSet Name="fk_IdEntity_FloatEntityAttribute" Association="Entity.Store.fk_IdEntity_FloatEntityAttribute">
+            <End Role="EntityAttributeTable" EntitySet="EntityAttributeTable" />
+            <End Role="FloatEntityAttributeTable" EntitySet="FloatEntityAttributeTable" />
+          </AssociationSet>
+          <AssociationSet Name="fk_IdEntity_IntegerEntityAttribute" Association="Entity.Store.fk_IdEntity_IntegerEntityAttribute">
+            <End Role="EntityAttributeTable" EntitySet="EntityAttributeTable" />
+            <End Role="IntegerEntityAttributeTable" EntitySet="IntegerEntityAttributeTable" />
+          </AssociationSet>
+          <AssociationSet Name="fk_IdEntity_MediumEntityAttribute" Association="Entity.Store.fk_IdEntity_MediumEntityAttribute">
+            <End Role="EntityAttributeTable" EntitySet="EntityAttributeTable" />
+            <End Role="MediumStringEntityAttributeTable" EntitySet="MediumStringEntityAttributeTable" />
+          </AssociationSet>
+          <AssociationSet Name="fk_IdEntity_StringEntityAttribute" Association="Entity.Store.fk_IdEntity_StringEntityAttribute">
+            <End Role="EntityAttributeTable" EntitySet="EntityAttributeTable" />
+            <End Role="StringEntityAttributeTable" EntitySet="StringEntityAttributeTable" />
+          </AssociationSet>
+          <AssociationSet Name="fk_IdEntity_TinyStringEntityAttribute" Association="Entity.Store.fk_IdEntity_TinyStringEntityAttribute">
+            <End Role="EntityAttributeTable" EntitySet="EntityAttributeTable" />
+            <End Role="TinyStringEntityAttributeTable" EntitySet="TinyStringEntityAttributeTable" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="BlobEntityAttributeTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdEntityAttribute" Type="int" />
+          <Property Name="Value" Type="blob" />
+        </EntityType>
+        <EntityType Name="BooleanEntityAttributeTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdEntityAttribute" Type="int" />
+          <Property Name="Value" Type="bool" />
+        </EntityType>
+        <EntityType Name="DateTimeEntityAttributeTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdEntityAttribute" Type="int" />
+          <Property Name="Value" Type="datetime" />
+        </EntityType>
+        <EntityType Name="DoubleEntityAttributeTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdEntityAttribute" Type="int" />
+          <Property Name="Value" Type="double" />
+        </EntityType>
+        <EntityType Name="EntityAttributeTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdEntity" Type="int" />
+          <Property Name="Name" Type="varchar" MaxLength="80" />
+          <Property Name="Type" Type="smallint" />
+        </EntityType>
+        <EntityType Name="EntityTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdSystem" Type="int" />
+          <Property Name="IdOrganization" Type="int" />
+          <Property Name="Name" Type="varchar" MaxLength="80" />
+          <Property Name="Code" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="FloatEntityAttributeTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdEntityAttribute" Type="int" />
+          <Property Name="Value" Type="float" />
+        </EntityType>
+        <EntityType Name="IntegerEntityAttributeTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdEntityAttribute" Type="int" />
+          <Property Name="Value" Type="int" />
+        </EntityType>
+        <EntityType Name="MediumStringEntityAttributeTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdEntityAttribute" Type="int" />
+          <Property Name="Value" Type="mediumtext" />
+        </EntityType>
+        <EntityType Name="StringEntityAttributeTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdEntityAttribute" Type="int" />
+          <Property Name="Value" Type="text" />
+        </EntityType>
+        <EntityType Name="TinyStringEntityAttributeTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdEntityAttribute" Type="int" />
+          <Property Name="Value" Type="tinytext" />
+        </EntityType>
+        <Association Name="fk_IdEntity_BlobEntityAttribute">
+          <End Role="EntityAttributeTable" Type="Entity.Store.EntityAttributeTable" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="BlobEntityAttributeTable" Type="Entity.Store.BlobEntityAttributeTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EntityAttributeTable">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BlobEntityAttributeTable">
+              <PropertyRef Name="IdEntityAttribute" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_IdEntity_BooleanEntityAttribute">
+          <End Role="EntityAttributeTable" Type="Entity.Store.EntityAttributeTable" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="BooleanEntityAttributeTable" Type="Entity.Store.BooleanEntityAttributeTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EntityAttributeTable">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BooleanEntityAttributeTable">
+              <PropertyRef Name="IdEntityAttribute" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_IdEntity_DateTimeEntityAttribute">
+          <End Role="EntityAttributeTable" Type="Entity.Store.EntityAttributeTable" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DateTimeEntityAttributeTable" Type="Entity.Store.DateTimeEntityAttributeTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EntityAttributeTable">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DateTimeEntityAttributeTable">
+              <PropertyRef Name="IdEntityAttribute" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_IdEntity_DoubleEntityAttribute">
+          <End Role="EntityAttributeTable" Type="Entity.Store.EntityAttributeTable" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DoubleEntityAttributeTable" Type="Entity.Store.DoubleEntityAttributeTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EntityAttributeTable">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DoubleEntityAttributeTable">
+              <PropertyRef Name="IdEntityAttribute" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_IdEntity_EntityAttribute">
+          <End Role="EntityTable" Type="Entity.Store.EntityTable" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="EntityAttributeTable" Type="Entity.Store.EntityAttributeTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EntityTable">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EntityAttributeTable">
+              <PropertyRef Name="IdEntity" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_IdEntity_FloatEntityAttribute">
+          <End Role="EntityAttributeTable" Type="Entity.Store.EntityAttributeTable" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="FloatEntityAttributeTable" Type="Entity.Store.FloatEntityAttributeTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EntityAttributeTable">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FloatEntityAttributeTable">
+              <PropertyRef Name="IdEntityAttribute" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_IdEntity_IntegerEntityAttribute">
+          <End Role="EntityAttributeTable" Type="Entity.Store.EntityAttributeTable" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="IntegerEntityAttributeTable" Type="Entity.Store.IntegerEntityAttributeTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EntityAttributeTable">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="IntegerEntityAttributeTable">
+              <PropertyRef Name="IdEntityAttribute" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_IdEntity_MediumEntityAttribute">
+          <End Role="EntityAttributeTable" Type="Entity.Store.EntityAttributeTable" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="MediumStringEntityAttributeTable" Type="Entity.Store.MediumStringEntityAttributeTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EntityAttributeTable">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="MediumStringEntityAttributeTable">
+              <PropertyRef Name="IdEntityAttribute" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_IdEntity_StringEntityAttribute">
+          <End Role="EntityAttributeTable" Type="Entity.Store.EntityAttributeTable" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="StringEntityAttributeTable" Type="Entity.Store.StringEntityAttributeTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EntityAttributeTable">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="StringEntityAttributeTable">
+              <PropertyRef Name="IdEntityAttribute" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_IdEntity_TinyStringEntityAttribute">
+          <End Role="EntityAttributeTable" Type="Entity.Store.EntityAttributeTable" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TinyStringEntityAttributeTable" Type="Entity.Store.TinyStringEntityAttributeTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EntityAttributeTable">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TinyStringEntityAttributeTable">
+              <PropertyRef Name="IdEntityAttribute" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Entity" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="MySqlEntityDatabaseContext" annotation:LazyLoadingEnabled="false" a:TypeAccess="Public" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration">
+          <EntitySet Name="BlobEntityAttributeTable" EntityType="Entity.BlobEntityAttributeTable" a:GetterAccess="Internal" />
+          <EntitySet Name="BooleanEntityAttributeTable" EntityType="Entity.BooleanEntityAttributeTable" a:GetterAccess="Internal" />
+          <EntitySet Name="DateTimeEntityAttributeTable" EntityType="Entity.DateTimeEntityAttributeTable" a:GetterAccess="Internal" />
+          <EntitySet Name="DoubleEntityAttributeTable" EntityType="Entity.DoubleEntityAttributeTable" a:GetterAccess="Internal" />
+          <EntitySet Name="EntityAttributeTable" EntityType="Entity.EntityAttributeTable" a:GetterAccess="Internal" />
+          <EntitySet Name="EntityTable" EntityType="Entity.EntityTable" a:GetterAccess="Internal" />
+          <EntitySet Name="FloatEntityAttributeTable" EntityType="Entity.FloatEntityAttributeTable" a:GetterAccess="Internal" />
+          <EntitySet Name="IntegerEntityAttributeTable" EntityType="Entity.IntegerEntityAttributeTable" a:GetterAccess="Internal" />
+          <EntitySet Name="MediumStringEntityAttributeTable" EntityType="Entity.MediumStringEntityAttributeTable" a:GetterAccess="Internal" />
+          <EntitySet Name="StringEntityAttributeTable" EntityType="Entity.StringEntityAttributeTable" a:GetterAccess="Internal" />
+          <EntitySet Name="TinyStringEntityAttributeTable" EntityType="Entity.TinyStringEntityAttributeTable" a:GetterAccess="Internal" />
+          <AssociationSet Name="fk_IdEntity_BlobEntityAttribute" Association="Entity.fk_IdEntity_BlobEntityAttribute">
+            <End Role="EntityAttributeTable" EntitySet="EntityAttributeTable" />
+            <End Role="BlobEntityAttributeTable" EntitySet="BlobEntityAttributeTable" />
+          </AssociationSet>
+          <AssociationSet Name="fk_IdEntity_BooleanEntityAttribute" Association="Entity.fk_IdEntity_BooleanEntityAttribute">
+            <End Role="EntityAttributeTable" EntitySet="EntityAttributeTable" />
+            <End Role="BooleanEntityAttributeTable" EntitySet="BooleanEntityAttributeTable" />
+          </AssociationSet>
+          <AssociationSet Name="fk_IdEntity_DateTimeEntityAttribute" Association="Entity.fk_IdEntity_DateTimeEntityAttribute">
+            <End Role="EntityAttributeTable" EntitySet="EntityAttributeTable" />
+            <End Role="DateTimeEntityAttributeTable" EntitySet="DateTimeEntityAttributeTable" />
+          </AssociationSet>
+          <AssociationSet Name="fk_IdEntity_DoubleEntityAttribute" Association="Entity.fk_IdEntity_DoubleEntityAttribute">
+            <End Role="EntityAttributeTable" EntitySet="EntityAttributeTable" />
+            <End Role="DoubleEntityAttributeTable" EntitySet="DoubleEntityAttributeTable" />
+          </AssociationSet>
+          <AssociationSet Name="fk_IdEntity_EntityAttribute" Association="Entity.fk_IdEntity_EntityAttribute">
+            <End Role="EntityTable" EntitySet="EntityTable" />
+            <End Role="EntityAttributeTable" EntitySet="EntityAttributeTable" />
+          </AssociationSet>
+          <AssociationSet Name="fk_IdEntity_FloatEntityAttribute" Association="Entity.fk_IdEntity_FloatEntityAttribute">
+            <End Role="EntityAttributeTable" EntitySet="EntityAttributeTable" />
+            <End Role="FloatEntityAttributeTable" EntitySet="FloatEntityAttributeTable" />
+          </AssociationSet>
+          <AssociationSet Name="fk_IdEntity_IntegerEntityAttribute" Association="Entity.fk_IdEntity_IntegerEntityAttribute">
+            <End Role="EntityAttributeTable" EntitySet="EntityAttributeTable" />
+            <End Role="IntegerEntityAttributeTable" EntitySet="IntegerEntityAttributeTable" />
+          </AssociationSet>
+          <AssociationSet Name="fk_IdEntity_MediumEntityAttribute" Association="Entity.fk_IdEntity_MediumEntityAttribute">
+            <End Role="EntityAttributeTable" EntitySet="EntityAttributeTable" />
+            <End Role="MediumStringEntityAttributeTable" EntitySet="MediumStringEntityAttributeTable" />
+          </AssociationSet>
+          <AssociationSet Name="fk_IdEntity_StringEntityAttribute" Association="Entity.fk_IdEntity_StringEntityAttribute">
+            <End Role="EntityAttributeTable" EntitySet="EntityAttributeTable" />
+            <End Role="StringEntityAttributeTable" EntitySet="StringEntityAttributeTable" />
+          </AssociationSet>
+          <AssociationSet Name="fk_IdEntity_TinyStringEntityAttribute" Association="Entity.fk_IdEntity_TinyStringEntityAttribute">
+            <End Role="EntityAttributeTable" EntitySet="EntityAttributeTable" />
+            <End Role="TinyStringEntityAttributeTable" EntitySet="TinyStringEntityAttributeTable" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="BlobEntityAttributeTable" a:TypeAccess="Public" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdEntityAttribute" />
+          <Property Type="Binary" Name="Value" />
+          <NavigationProperty Name="EntityAttributeTable" Relationship="Entity.fk_IdEntity_BlobEntityAttribute" FromRole="BlobEntityAttributeTable" ToRole="EntityAttributeTable" />
+        </EntityType>
+        <EntityType Name="BooleanEntityAttributeTable" a:TypeAccess="Public" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdEntityAttribute" />
+          <Property Type="Boolean" Name="Value" />
+          <NavigationProperty Name="EntityAttributeTable" Relationship="Entity.fk_IdEntity_BooleanEntityAttribute" FromRole="BooleanEntityAttributeTable" ToRole="EntityAttributeTable" />
+        </EntityType>
+        <EntityType Name="DateTimeEntityAttributeTable" a:TypeAccess="Public" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdEntityAttribute" />
+          <Property Type="DateTime" Name="Value" />
+          <NavigationProperty Name="EntityAttributeTable" Relationship="Entity.fk_IdEntity_DateTimeEntityAttribute" FromRole="DateTimeEntityAttributeTable" ToRole="EntityAttributeTable" />
+        </EntityType>
+        <EntityType Name="DoubleEntityAttributeTable" a:TypeAccess="Public" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdEntityAttribute" />
+          <Property Type="Double" Name="Value" />
+          <NavigationProperty Name="EntityAttributeTable" Relationship="Entity.fk_IdEntity_DoubleEntityAttribute" FromRole="DoubleEntityAttributeTable" ToRole="EntityAttributeTable" />
+        </EntityType>
+        <EntityType Name="EntityAttributeTable" a:TypeAccess="Public" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdEntity" />
+          <Property Type="String" Name="Name" />
+          <Property Type="Int16" Name="Type" />
+          <NavigationProperty Name="BlobEntityAttributeTable" Relationship="Entity.fk_IdEntity_BlobEntityAttribute" FromRole="EntityAttributeTable" ToRole="BlobEntityAttributeTable" />
+          <NavigationProperty Name="BooleanEntityAttributeTable" Relationship="Entity.fk_IdEntity_BooleanEntityAttribute" FromRole="EntityAttributeTable" ToRole="BooleanEntityAttributeTable" />
+          <NavigationProperty Name="DateTimeEntityAttributeTable" Relationship="Entity.fk_IdEntity_DateTimeEntityAttribute" FromRole="EntityAttributeTable" ToRole="DateTimeEntityAttributeTable" />
+          <NavigationProperty Name="DoubleEntityAttributeTable" Relationship="Entity.fk_IdEntity_DoubleEntityAttribute" FromRole="EntityAttributeTable" ToRole="DoubleEntityAttributeTable" />
+          <NavigationProperty Name="EntityTable" Relationship="Entity.fk_IdEntity_EntityAttribute" FromRole="EntityAttributeTable" ToRole="EntityTable" />
+          <NavigationProperty Name="FloatEntityAttributeTable" Relationship="Entity.fk_IdEntity_FloatEntityAttribute" FromRole="EntityAttributeTable" ToRole="FloatEntityAttributeTable" />
+          <NavigationProperty Name="IntegerEntityAttributeTable" Relationship="Entity.fk_IdEntity_IntegerEntityAttribute" FromRole="EntityAttributeTable" ToRole="IntegerEntityAttributeTable" />
+          <NavigationProperty Name="MediumStringEntityAttributeTable" Relationship="Entity.fk_IdEntity_MediumEntityAttribute" FromRole="EntityAttributeTable" ToRole="MediumStringEntityAttributeTable" />
+          <NavigationProperty Name="StringEntityAttributeTable" Relationship="Entity.fk_IdEntity_StringEntityAttribute" FromRole="EntityAttributeTable" ToRole="StringEntityAttributeTable" />
+          <NavigationProperty Name="TinyStringEntityAttributeTable" Relationship="Entity.fk_IdEntity_TinyStringEntityAttribute" FromRole="EntityAttributeTable" ToRole="TinyStringEntityAttributeTable" />
+        </EntityType>
+        <EntityType Name="EntityTable" a:TypeAccess="Public" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdSystem" />
+          <Property Type="Int32" Name="IdOrganization" />
+          <Property Type="String" Name="Name" />
+          <Property Type="String" Name="Code" />
+          <NavigationProperty Name="EntityAttributeTable" Relationship="Entity.fk_IdEntity_EntityAttribute" FromRole="EntityTable" ToRole="EntityAttributeTable" />
+        </EntityType>
+        <EntityType Name="FloatEntityAttributeTable" a:TypeAccess="Public" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdEntityAttribute" />
+          <Property Type="Single" Name="Value" />
+          <NavigationProperty Name="EntityAttributeTable" Relationship="Entity.fk_IdEntity_FloatEntityAttribute" FromRole="FloatEntityAttributeTable" ToRole="EntityAttributeTable" />
+        </EntityType>
+        <EntityType Name="IntegerEntityAttributeTable" a:TypeAccess="Public" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdEntityAttribute" />
+          <Property Type="Int32" Name="Value" />
+          <NavigationProperty Name="EntityAttributeTable" Relationship="Entity.fk_IdEntity_IntegerEntityAttribute" FromRole="IntegerEntityAttributeTable" ToRole="EntityAttributeTable" />
+        </EntityType>
+        <EntityType Name="MediumStringEntityAttributeTable" a:TypeAccess="Public" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdEntityAttribute" />
+          <Property Type="String" Name="Value" />
+          <NavigationProperty Name="EntityAttributeTable" Relationship="Entity.fk_IdEntity_MediumEntityAttribute" FromRole="MediumStringEntityAttributeTable" ToRole="EntityAttributeTable" />
+        </EntityType>
+        <EntityType Name="StringEntityAttributeTable" a:TypeAccess="Public" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdEntityAttribute" />
+          <Property Type="String" Name="Value" />
+          <NavigationProperty Name="EntityAttributeTable" Relationship="Entity.fk_IdEntity_StringEntityAttribute" FromRole="StringEntityAttributeTable" ToRole="EntityAttributeTable" />
+        </EntityType>
+        <EntityType Name="TinyStringEntityAttributeTable" a:TypeAccess="Public" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdEntityAttribute" />
+          <Property Type="String" Name="Value" />
+          <NavigationProperty Name="EntityAttributeTable" Relationship="Entity.fk_IdEntity_TinyStringEntityAttribute" FromRole="TinyStringEntityAttributeTable" ToRole="EntityAttributeTable" />
+        </EntityType>
+        <Association Name="fk_IdEntity_BlobEntityAttribute">
+          <End Type="Entity.EntityAttributeTable" Role="EntityAttributeTable" Multiplicity="0..1" />
+          <End Type="Entity.BlobEntityAttributeTable" Role="BlobEntityAttributeTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EntityAttributeTable">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BlobEntityAttributeTable">
+              <PropertyRef Name="IdEntityAttribute" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_IdEntity_BooleanEntityAttribute">
+          <End Type="Entity.EntityAttributeTable" Role="EntityAttributeTable" Multiplicity="0..1" />
+          <End Type="Entity.BooleanEntityAttributeTable" Role="BooleanEntityAttributeTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EntityAttributeTable">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BooleanEntityAttributeTable">
+              <PropertyRef Name="IdEntityAttribute" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_IdEntity_DateTimeEntityAttribute">
+          <End Type="Entity.EntityAttributeTable" Role="EntityAttributeTable" Multiplicity="0..1" />
+          <End Type="Entity.DateTimeEntityAttributeTable" Role="DateTimeEntityAttributeTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EntityAttributeTable">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DateTimeEntityAttributeTable">
+              <PropertyRef Name="IdEntityAttribute" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_IdEntity_DoubleEntityAttribute">
+          <End Type="Entity.EntityAttributeTable" Role="EntityAttributeTable" Multiplicity="0..1" />
+          <End Type="Entity.DoubleEntityAttributeTable" Role="DoubleEntityAttributeTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EntityAttributeTable">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DoubleEntityAttributeTable">
+              <PropertyRef Name="IdEntityAttribute" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_IdEntity_EntityAttribute">
+          <End Type="Entity.EntityTable" Role="EntityTable" Multiplicity="0..1" />
+          <End Type="Entity.EntityAttributeTable" Role="EntityAttributeTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EntityTable">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EntityAttributeTable">
+              <PropertyRef Name="IdEntity" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_IdEntity_FloatEntityAttribute">
+          <End Type="Entity.EntityAttributeTable" Role="EntityAttributeTable" Multiplicity="0..1" />
+          <End Type="Entity.FloatEntityAttributeTable" Role="FloatEntityAttributeTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EntityAttributeTable">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FloatEntityAttributeTable">
+              <PropertyRef Name="IdEntityAttribute" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_IdEntity_IntegerEntityAttribute">
+          <End Type="Entity.EntityAttributeTable" Role="EntityAttributeTable" Multiplicity="0..1" />
+          <End Type="Entity.IntegerEntityAttributeTable" Role="IntegerEntityAttributeTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EntityAttributeTable">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="IntegerEntityAttributeTable">
+              <PropertyRef Name="IdEntityAttribute" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_IdEntity_MediumEntityAttribute">
+          <End Type="Entity.EntityAttributeTable" Role="EntityAttributeTable" Multiplicity="0..1" />
+          <End Type="Entity.MediumStringEntityAttributeTable" Role="MediumStringEntityAttributeTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EntityAttributeTable">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="MediumStringEntityAttributeTable">
+              <PropertyRef Name="IdEntityAttribute" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_IdEntity_StringEntityAttribute">
+          <End Type="Entity.EntityAttributeTable" Role="EntityAttributeTable" Multiplicity="0..1" />
+          <End Type="Entity.StringEntityAttributeTable" Role="StringEntityAttributeTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EntityAttributeTable">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="StringEntityAttributeTable">
+              <PropertyRef Name="IdEntityAttribute" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_IdEntity_TinyStringEntityAttribute">
+          <End Type="Entity.EntityAttributeTable" Role="EntityAttributeTable" Multiplicity="0..1" />
+          <End Type="Entity.TinyStringEntityAttributeTable" Role="TinyStringEntityAttributeTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EntityAttributeTable">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TinyStringEntityAttributeTable">
+              <PropertyRef Name="IdEntityAttribute" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EntityStoreContainer" CdmEntityContainer="MySqlEntityDatabaseContext">
+          <EntitySetMapping Name="BlobEntityAttributeTable">
+            <EntityTypeMapping TypeName="Entity.BlobEntityAttributeTable">
+              <MappingFragment StoreEntitySet="BlobEntityAttributeTable">
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="IdEntityAttribute" ColumnName="IdEntityAttribute" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BooleanEntityAttributeTable">
+            <EntityTypeMapping TypeName="Entity.BooleanEntityAttributeTable">
+              <MappingFragment StoreEntitySet="BooleanEntityAttributeTable">
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="IdEntityAttribute" ColumnName="IdEntityAttribute" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DateTimeEntityAttributeTable">
+            <EntityTypeMapping TypeName="Entity.DateTimeEntityAttributeTable">
+              <MappingFragment StoreEntitySet="DateTimeEntityAttributeTable">
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="IdEntityAttribute" ColumnName="IdEntityAttribute" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DoubleEntityAttributeTable">
+            <EntityTypeMapping TypeName="Entity.DoubleEntityAttributeTable">
+              <MappingFragment StoreEntitySet="DoubleEntityAttributeTable">
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="IdEntityAttribute" ColumnName="IdEntityAttribute" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EntityAttributeTable">
+            <EntityTypeMapping TypeName="Entity.EntityAttributeTable">
+              <MappingFragment StoreEntitySet="EntityAttributeTable">
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IdEntity" ColumnName="IdEntity" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EntityTable">
+            <EntityTypeMapping TypeName="Entity.EntityTable">
+              <MappingFragment StoreEntitySet="EntityTable">
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IdOrganization" ColumnName="IdOrganization" />
+                <ScalarProperty Name="IdSystem" ColumnName="IdSystem" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FloatEntityAttributeTable">
+            <EntityTypeMapping TypeName="Entity.FloatEntityAttributeTable">
+              <MappingFragment StoreEntitySet="FloatEntityAttributeTable">
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="IdEntityAttribute" ColumnName="IdEntityAttribute" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IntegerEntityAttributeTable">
+            <EntityTypeMapping TypeName="Entity.IntegerEntityAttributeTable">
+              <MappingFragment StoreEntitySet="IntegerEntityAttributeTable">
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="IdEntityAttribute" ColumnName="IdEntityAttribute" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MediumStringEntityAttributeTable">
+            <EntityTypeMapping TypeName="Entity.MediumStringEntityAttributeTable">
+              <MappingFragment StoreEntitySet="MediumStringEntityAttributeTable">
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="IdEntityAttribute" ColumnName="IdEntityAttribute" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StringEntityAttributeTable">
+            <EntityTypeMapping TypeName="Entity.StringEntityAttributeTable">
+              <MappingFragment StoreEntitySet="StringEntityAttributeTable">
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="IdEntityAttribute" ColumnName="IdEntityAttribute" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TinyStringEntityAttributeTable">
+            <EntityTypeMapping TypeName="Entity.TinyStringEntityAttributeTable">
+              <MappingFragment StoreEntitySet="TinyStringEntityAttributeTable">
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="IdEntityAttribute" ColumnName="IdEntityAttribute" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="DDLGenerationTemplate" Value="$(VSEFTools)\DBGen\SSDLToMySQL.tt" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="MySqlEntityDatabase" ZoomLevel="21">
+        <EntityTypeShape EntityType="Entity.BlobEntityAttributeTable" Width="1.5" PointX="5.25" PointY="1.875" Height="1.7879850260416745" />
+        <EntityTypeShape EntityType="Entity.BooleanEntityAttributeTable" Width="1.5" PointX="5.25" PointY="4.5" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="Entity.DateTimeEntityAttributeTable" Width="1.5" PointX="5.25" PointY="7" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="Entity.DoubleEntityAttributeTable" Width="1.5" PointX="5.25" PointY="9.5" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="Entity.EntityAttributeTable" Width="1.5" PointX="3" PointY="11.125" Height="3.7109993489583317" />
+        <EntityTypeShape EntityType="Entity.EntityTable" Width="1.5" PointX="0.75" PointY="11.875" Height="2.1725878906250031" />
+        <EntityTypeShape EntityType="Entity.FloatEntityAttributeTable" Width="1.5" PointX="5.25" PointY="12.125" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="Entity.IntegerEntityAttributeTable" Width="1.5" PointX="5.25" PointY="14.625" Height="1.7879850260416657" />
+        <EntityTypeShape EntityType="Entity.MediumStringEntityAttributeTable" Width="1.5" PointX="5.25" PointY="17.125" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="Entity.StringEntityAttributeTable" Width="1.5" PointX="5.25" PointY="19.75" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="Entity.TinyStringEntityAttributeTable" Width="1.5" PointX="5.25" PointY="22.25" Height="1.7879850260416674" />
+        <AssociationConnector Association="Entity.fk_IdEntity_BlobEntityAttribute" >
+          <ConnectorPoint PointX="3.75" PointY="11.125" />
+          <ConnectorPoint PointX="3.75" PointY="2.7689925130208373" />
+          <ConnectorPoint PointX="5.25" PointY="2.7689925130208373" />
+        </AssociationConnector>
+        <AssociationConnector Association="Entity.fk_IdEntity_BooleanEntityAttribute" >
+          <ConnectorPoint PointX="4.1562525" PointY="11.125" />
+          <ConnectorPoint PointX="4.1562525" PointY="5.3939925130208337" />
+          <ConnectorPoint PointX="5.25" PointY="5.3939925130208337" />
+        </AssociationConnector>
+        <AssociationConnector Association="Entity.fk_IdEntity_DateTimeEntityAttribute" >
+          <ConnectorPoint PointX="3.3437475" PointY="11.125" />
+          <ConnectorPoint PointX="3.3437475" PointY="7.8939925130208337" />
+          <ConnectorPoint PointX="3.6666666666666665" PointY="7.8939925130208328" />
+          <ConnectorPoint PointX="3.8333333333333335" PointY="7.8939925130208337" />
+          <ConnectorPoint PointX="4.0729191666666669" PointY="7.8939925130208328" />
+          <ConnectorPoint PointX="4.2395858333333329" PointY="7.8939925130208337" />
+          <ConnectorPoint PointX="5.25" PointY="7.8939925130208337" />
+        </AssociationConnector>
+        <AssociationConnector Association="Entity.fk_IdEntity_DoubleEntityAttribute" >
+          <ConnectorPoint PointX="4.3593787499999994" PointY="11.125" />
+          <ConnectorPoint PointX="4.3593787499999994" PointY="10.281247500000006" />
+          <ConnectorPoint PointX="5.25" PointY="10.281247500000006" />
+        </AssociationConnector>
+        <AssociationConnector Association="Entity.fk_IdEntity_EntityAttribute" >
+          <ConnectorPoint PointX="2.25" PointY="12.961293945312502" />
+          <ConnectorPoint PointX="3" PointY="12.961293945312502" />
+        </AssociationConnector>
+        <AssociationConnector Association="Entity.fk_IdEntity_FloatEntityAttribute" >
+          <ConnectorPoint PointX="4.5" PointY="13.018992513020834" />
+          <ConnectorPoint PointX="5.25" PointY="13.018992513020834" />
+        </AssociationConnector>
+        <AssociationConnector Association="Entity.fk_IdEntity_IntegerEntityAttribute" >
+          <ConnectorPoint PointX="3.75" PointY="14.835999348958332" />
+          <ConnectorPoint PointX="3.75" PointY="15.624492687499998" />
+          <ConnectorPoint PointX="4.0729191666666669" PointY="15.624492687499998" />
+          <ConnectorPoint PointX="4.2395858333333329" PointY="15.624492687499998" />
+          <ConnectorPoint PointX="4.2760454166666664" PointY="15.624492687499998" />
+          <ConnectorPoint PointX="4.4427120833333325" PointY="15.624492687499998" />
+          <ConnectorPoint PointX="5.25" PointY="15.624492687499998" />
+        </AssociationConnector>
+        <AssociationConnector Association="Entity.fk_IdEntity_MediumEntityAttribute" >
+          <ConnectorPoint PointX="4.1562525" PointY="14.835999348958332" />
+          <ConnectorPoint PointX="4.1562525" PointY="18.018992513020834" />
+          <ConnectorPoint PointX="4.2760454166666664" PointY="18.018992513020834" />
+          <ConnectorPoint PointX="4.4427120833333325" PointY="18.018992513020834" />
+          <ConnectorPoint PointX="5.25" PointY="18.018992513020834" />
+        </AssociationConnector>
+        <AssociationConnector Association="Entity.fk_IdEntity_StringEntityAttribute" >
+          <ConnectorPoint PointX="3.3437475" PointY="14.835999348958332" />
+          <ConnectorPoint PointX="3.3437475" PointY="20.643992513020834" />
+          <ConnectorPoint PointX="4.2760454166666664" PointY="20.643992513020834" />
+          <ConnectorPoint PointX="4.4427120833333325" PointY="20.643992513020834" />
+          <ConnectorPoint PointX="5.25" PointY="20.643992513020834" />
+        </AssociationConnector>
+        <AssociationConnector Association="Entity.fk_IdEntity_TinyStringEntityAttribute" >
+          <ConnectorPoint PointX="4.3593787499999994" PointY="14.835999348958332" />
+          <ConnectorPoint PointX="4.3593787499999994" PointY="23.143992513020834" />
+          <ConnectorPoint PointX="5.25" PointY="23.143992513020834" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
